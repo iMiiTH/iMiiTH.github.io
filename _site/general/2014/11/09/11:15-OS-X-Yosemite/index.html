@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset="utf-8"/>
+      <title> OS X Yosemite |  streetcar thoughts</title>
+      <link rel="stylesheet" href="/style.css" />
+      <meta name="description" content="The wandering thoughts of Mitchell Mohorovich"/>
+      <meta name="author" content="Mitchell Mohorovich"/>
+      <link rel="author" href="humans.txt"/>
+      <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
+
+      <link rel="stylesheet" href="/resources/fontello/css/fontello.css">
+      <link rel="stylesheet" href="/resources/fontello/css/animation.css">
+      <!--[if IE 7]><link rel="stylesheet" href="/resources/fontello/css/fontello-ie7.css"><![endif]-->
+   </head>
+
+   <body>
+      <header>
+      <h1><a href="/">streetcar thoughts</a></h1>
+      <h4>The wandering thoughts of Mitchell Mohorovich</h4>
+      </header>
+
+      <nav>
+
+      <h3>Navigation</h3>
+
+      <ul>
+         <li><i class="icon-home"></i>   <a href="/">Home</a></li>
+         <li><i class="icon-mail"></i>   <a href="/contact">Contact</a></li>
+         <li><i class="icon-th"></i>     <a href="/archive">Archive</a></li>
+         <li><i class="icon-rss"></i>    <a href="/feed.xml">RSS Feed</a></li>
+      </ul>
+
+      <h3>Projects</h3>
+
+      <ul>
+         <li><i class="icon-link"></i>   <a href="#">Forecasted</a></li>
+         <li><i class="icon-link"></i>   <a href="#">Bookmarked</a></li>
+      </ul>
+      </nav>
+
+      <main>
+
+      <head>
+   <link rel="stylesheet" type="text/css" href="css/syntax.css">
+</head>
+
+<article>
+        <header>
+            <h2>OS X Yosemite</h2>
+            <span><i class="icon-clock"></i><time datetime="2014-11-09">Nov 09, 2014</time></span><br/>
+            <span class="category"><i class="icon-tag"></i> <a href="/general/">general</a></span><br/>
+            <!-- <span class="author"><i class="icon-user"></i> Mitchell Mohorovich</span> -->
+        </header>
+
+        <div class="entry"><p>So I was pretty excited about OS X Yosemite. Honestly just for the black menubar. So when it was announced I started wondering how the heck developers are going to support it.</p>
+
+<p>The first thing I found was this line:</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="p">[[</span><span class="bp">NSUserDefaults</span> <span class="n">standardUserDefaults</span><span class="p">]</span> <span class="nl">stringForKey</span><span class="p">:</span><span class="s">@&quot;AppleInterfaceStyle&quot;</span><span class="p">]</span></code></pre></div>
+
+
+<p>Which would return the string "dark" if the theme was used, "" otherwise.</p>
+
+<p>This worked fine and all (I guess.) it was tedious having to have a white and a black version of every menubar icon. I had those from before, where I manually set the selected and unselected icons. (Again, I had no idea what I was doing.) So it wasn't all that bad. However there was a major problem using this method.</p>
+
+<p>It would only run at startup, setting the icons for each theme, but if the user changed their theme after that, the icons wouldn't change. I tried looking for some kind of message that gets sent whenever the theme changed, but found nothing.</p>
+
+<p>In the end I finally found a solution. You set your menubar icons load them ect as normally. But you only really need one icon, you don't need to make a black and a white version.</p>
+
+<div class="highlight"><pre><code class="language-objective-c" data-lang="objective-c"><span class="nb">self</span><span class="p">.</span><span class="n">clear_day_black</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSImage</span> <span class="n">alloc</span><span class="p">]</span><span class="nl">initWithContentsOfFile</span><span class="p">:[</span><span class="n">bundle</span> <span class="nl">pathForResource</span><span class="p">:</span><span class="s">@&quot;clear-day-black@2x&quot;</span> <span class="nl">ofType</span><span class="p">:</span><span class="s">@&quot;png&quot;</span><span class="p">]];</span>
+
+<span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">clear_day_black</span> <span class="nl">setTemplate</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span></code></pre></div>
+
+
+<p>By setting it as a template, OS X will automatically make the icon white or black depending on selection/theme. I guess this is why they only allow black and white menubar icons.</p>
+</div>
+
+        <footer><!-- additional info --></footer>
+
+</article>
+
+
+
+      </main>
+
+      <footer>
+      <hr>
+      <p>&copy; <time>2012</time> Mitchell Mohorovich</p>
+      </footer>
+
+      <script src="/scripts.js"></script>
+   </body>
+
+</html>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>streetcar thoughts</title>
+		<description>The wandering thoughts of Mitchell Mohorovich</description>
+		<link>http://imiith.github.io</link>
+		
+			<item>
+				<title>OS X Yosemite</title>
+				<description>&lt;p&gt;So I was pretty excited about OS X Yosemite. Honestly just for the black menubar. So when it was announced I started wondering how the heck developers are going to support it.&lt;/p&gt;
+
+&lt;p&gt;The first thing I found was this line:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;AppleInterfaceStyle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Which would return the string &quot;dark&quot; if the theme was used, &quot;&quot; otherwise.&lt;/p&gt;
+
+&lt;p&gt;This worked fine and all (I guess.) it was tedious having to have a white and a black version of every menubar icon. I had those from before, where I manually set the selected and unselected icons. (Again, I had no idea what I was doing.) So it wasn&#39;t all that bad. However there was a major problem using this method.&lt;/p&gt;
+
+&lt;p&gt;It would only run at startup, setting the icons for each theme, but if the user changed their theme after that, the icons wouldn&#39;t change. I tried looking for some kind of message that gets sent whenever the theme changed, but found nothing.&lt;/p&gt;
+
+&lt;p&gt;In the end I finally found a solution. You set your menubar icons load them ect as normally. But you only really need one icon, you don&#39;t need to make a black and a white version.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clear_day_black&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSImage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;initWithContentsOfFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;clear-day-black@2x&amp;quot;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;ofType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clear_day_black&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setTemplate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By setting it as a template, OS X will automatically make the icon white or black depending on selection/theme. I guess this is why they only allow black and white menubar icons.&lt;/p&gt;
+</description>
+				<published>2014-11-09 06:15:00 -0500</published>
+				<link>http://imiith.github.io/general/2014/11/09/11:15-OS-X-Yosemite/</link>
+			</item>
+		
+			<item>
+				<title>First Post</title>
+				<description>&lt;p&gt;So I have no idea what I&#39;m doing really. I just learned about GitHub Pages, and we&#39;ll see what happens from here.&lt;/p&gt;
+</description>
+				<published>2014-11-08 17:40:02 -0500</published>
+				<link>http://imiith.github.io/general/2014/11/08/Hello-World/</link>
+			</item>
+		
+			<item>
+				<title>Guest Posts</title>
+				<description>&lt;p&gt;If you want to create a guest post that will appear as if written by another author, simply add an &lt;code&gt;author&lt;/code&gt; attribute to the
+YAML header of your blog post. This will be picked up in the template and displayed in the meta-section both on the front page
+as well as on the individual post pages.&lt;/p&gt;
+</description>
+				<published>2012-03-15 00:00:00 -0400</published>
+				<link>http://imiith.github.io/meta/2012/03/15/guest-blogs/</link>
+			</item>
+		
+			<item>
+				<title>Code Snippets</title>
+				<description>&lt;p&gt;Whenever you need to post a code snippet, use the liquid tags &lt;code&gt;hilight&lt;/code&gt; and &lt;code&gt;endhilight&lt;/code&gt; like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# some code goes here&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Note that this only provides color-coding. For that you might need to use a front end colorization engine like Highlight.JS or something similar.&lt;/p&gt;
+</description>
+				<published>2012-02-10 00:00:00 -0500</published>
+				<link>http://imiith.github.io/design/2012/02/10/code-snippets/</link>
+			</item>
+		
+			<item>
+				<title>Using the Web Icons</title>
+				<description>&lt;p&gt;This template uses &lt;a href=&quot;http://typicons.com/&quot;&gt;Typicons&lt;/a&gt; web font, provided by &lt;a href=&quot;http://fontello.com/&quot;&gt;Fontello&lt;/a&gt; font bundling service. It allows you to quickly
+add nice icons into your pages by using css tags.&lt;/p&gt;
+
+&lt;p&gt;To add an icon somewhere in the template simply do:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;i&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;icon-home&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/i&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This will insert a home icon, just as the one seen in the sidebar. The available class names you can use are as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/resources/img/icons.png&quot; title=&quot;Available Icons&quot; alt=&quot;Available Icons&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These should work in all the browsers, all the way down to and including IE7, but not IE6.&lt;/p&gt;
+</description>
+				<published>2012-01-19 00:00:00 -0500</published>
+				<link>http://imiith.github.io/design/2012/01/19/using-web-icons/</link>
+			</item>
+		
+			<item>
+				<title>Hello World!</title>
+				<description>&lt;p&gt;Hello World!&lt;/p&gt;
+
+&lt;p&gt;This is just a sample post.&lt;/p&gt;
+
+&lt;p&gt;Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. Aliquam fermentum leo aliquet quam volutpat et molestie mauris mattis. Suspendisse semper consequat velit in suscipit. Praesent blandit, mi id facilisis adipiscing, tortor tellus mollis quam, sed dignissim sapien diam ac lectus. Nunc eget ornare quam. Vivamus sit amet tortor dolor, non egestas ligula. Mauris nisi risus, semper nec blandit id, suscipit eget dolor. Sed placerat odio at erat porttitor varius. Phasellus ornare vestibulum dolor ac rhoncus. Mauris laoreet varius est eu rhoncus. Curabitur facilisis mauris eu purus pharetra vitae tincidunt nulla gravida. Duis sagittis, felis a luctus mattis, metus sem tempus velit, sit amet blandit tellus nisi id augue.&lt;/p&gt;
+
+&lt;p&gt;Proin feugiat libero ac lorem mollis fermentum. Cras et lacus sodales nisl facilisis ornare. Sed dolor eros, pulvinar ac varius non, bibendum eget odio. Nulla facilisi. Pellentesque et nisi a tellus ullamcorper faucibus. Nullam sagittis tempor mi non mattis. Proin ultricies, enim sit amet bibendum tristique, ligula ante feugiat nunc, sit amet imperdiet tortor nisl et felis. Pellentesque et nisl dui, non dictum libero. Vivamus tempor ante ac leo suscipit a sodales ligula iaculis. Curabitur massa mi, semper sed bibendum eget, auctor in nulla. Quisque at mi in ligula viverra suscipit sed vitae leo.&lt;/p&gt;
+</description>
+				<published>2012-01-18 00:00:00 -0500</published>
+				<link>http://imiith.github.io/meta/2012/01/18/hello-world/</link>
+			</item>
+		
+	</channel>
+</rss>

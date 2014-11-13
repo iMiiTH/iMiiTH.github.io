@@ -1,0 +1,189 @@
+body {
+   font-size: 12px;
+   font-family: Helvetica, Arial, OpenSans, Sans-Serif;
+   color:#564b47;  
+   margin: 0px;
+   padding-left: 50px;
+   padding-right: 20%;
+   margin-bottom: 10px;
+}
+
+body>header {
+   padding-top: 0px;
+   margin-top: 0px;
+   height: 150px;
+   width: 840px;
+   /* background-image: url("resources/img/IMG_1805_DVP.jpg"); */
+   background: url("resources/img/IMG_7592.jpg") center;
+   background-size: 100%;
+   color: white;
+}
+
+body>header h1>a {
+   /* color:#564b47; */
+   color:white;
+   text-decoration: none;
+   font-weight:lighter;
+}
+
+body>header  h1 {
+   padding-left: 50px;
+   padding-top: 25px;
+   margin-top: 0px;
+}
+
+body>header h4 {
+   margin-top: -10px;
+   font-weight:300;
+   padding-left: 75px;
+}
+
+h1,h2,h3,h4 {
+   width: 100%;
+   min-width: 840px;
+   font-weight:lighter;
+}
+
+hr {
+   margin-left: 0px;
+   padding-left: 0px;
+   border: 0px;
+   color: gray;
+   background-color: gray;
+   height: 1px;
+   width: 100%;
+   min-width: 840px;
+}
+
+pre {
+   background-color: #E8E8E8;
+   margin-left: 30px;
+   padding: 5px;
+   width: 80%;
+}
+
+code {
+   background-color: #E8E8E8;
+   padding-left: 3px;
+   padding-right: 3px;
+}
+
+pre {
+   background-color: #E8E8E8;
+   margin-left: 30px;
+   padding: 5px;
+   width: 80%;
+}
+
+table {
+   border: none;
+}
+
+td {
+   padding-left: 20px;
+}
+
+a {
+   color: green;
+   text-decoration: none;
+   font-weight: inherit;
+}
+
+a:hover {
+   color: #696969;
+}
+
+main {
+
+   width: 75%;
+   min-width: 600px;
+   margin-left: 150px;
+   display: block;
+}
+
+nav {
+   float: left;
+   width: 150px;
+   min-width: 150px;
+}
+
+nav a,
+nav a:visited,
+nav a:active {
+   color: #696969;
+   color: green;
+}
+
+nav a:hover {
+   color: blue;
+   color: #696969;
+}
+
+nav li {
+   margin-left: -25px;
+   list-style: none;
+}
+
+footer {
+   clear: both;
+   width: 100%;
+}
+
+article {
+   margin: 10px;
+}
+
+article h2>a,
+article h2>a:visited,
+article h2>a:active {
+   text-decoration: none;
+   color: green;
+}
+
+article h2>a:hover {
+   color: #696969;
+}
+
+article .entry {
+   margin-left: 15px;
+   padding: 10px;
+   width: 660px;
+}
+
+article .entry img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+}
+
+article header span {
+   margin-top: -10px;
+   margin-bottom: -3px;
+   margin-left: 5px;
+}
+
+article header h2 {
+   margin-bottom: 3px;
+}
+
+section address {
+   margin-left: 15px;
+}
+
+#paginator {
+   padding: 10px;
+}
+
+#paginator a {
+   text-decoration: none;
+}
+
+.more {
+   margin-left: 80%;
+}
+
+.highlight {
+   width: 100%;
+   word-wrap: break-word;
+}
