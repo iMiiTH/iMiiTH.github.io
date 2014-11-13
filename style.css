@@ -1,16 +1,19 @@
 body {
+   width: 690px;
    font-size: 12px;
    font-family: Helvetica, Arial, OpenSans, Sans-Serif;
    color:#564b47;  
    margin: 0px;
-   padding-left: 50px;
-   padding-right: 20%;
+   position: relative;
+   padding-left: 100px; 
+   padding-right: 0px;
    margin-bottom: 10px;
 }
 
 body>header {
    padding-top: 0px;
    margin-top: 0px;
+   margin-bottom: 40px;
    height: 150px;
    width: 840px;
    /* background-image: url("resources/img/IMG_1805_DVP.jpg"); */
@@ -33,6 +36,7 @@ body>header  h1 {
 }
 
 body>header h4 {
+   width: 200px;
    margin-top: -10px;
    font-weight:300;
    padding-left: 75px;
@@ -40,7 +44,7 @@ body>header h4 {
 
 h1,h2,h3,h4 {
    width: 100%;
-   min-width: 840px;
+   min-width: 300px;
    font-weight:lighter;
 }
 
@@ -94,17 +98,20 @@ a:hover {
 }
 
 main {
-
-   width: 75%;
+   width: 690px;
    min-width: 600px;
    margin-left: 150px;
    display: block;
+   margin-right: 0px;
+   padding-right: 0px;
+   border-right: 0px;
 }
 
 nav {
    float: left;
    width: 150px;
    min-width: 150px;
+   margin-top: -10px;
 }
 
 nav a,
