@@ -1,13 +1,19 @@
 ---
 layout: page
-title: Contact Information
+title: "Contact"
+description: "Have questions? I have answers (maybe)."
 ---
 
-<section>
-    <address>
-        <p><strong>{{site.author}}</strong></p>
+<p>If you want to contact me, just fill out the form below. Thanks!</p>
+<!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+<!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
 
-        <p><i class="icon-phone"></i> 1-555-123-1234<br/>
-        <i class="icon-mail"></i> <a href="mailto:{{site.author_email}}">{{site.author_email}}</a></p>
-    </address>
-</section>
+
+<form action="http://getsimpleform.com/messages?form_api_token=73b1f7a94118d6daa58f2ac69421036e" method="post">
+   <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+   <input type='hidden' name='redirect_to' value='<the complete return url e.g. http://fooey.com/thank-you.html>' />
+   <!-- all your input fields here.... -->
+   <input type='text' name='test' />
+   <input type='submit' value='Test form' />
+</form>
+
