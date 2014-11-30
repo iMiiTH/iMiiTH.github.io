@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-  Hello! Hi! Hey! Salut! Bonjour! Alôt! My name's Mitchell Mohorovich. 
+  Hello! Hi! Hey! Salut! Bonjour! Allô! My name's Mitchell Mohorovich. 
 </p>
 
 I'm a current student at Ryerson University, majoring in Computer Science.
