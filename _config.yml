@@ -2,24 +2,32 @@
 markdown:         redcarpet
 highlighter:         pygments
 
-# Permalinks
+   # Permalinks
 permalink:        pretty
 
-# Setup
+   # Setup
 title:            Streetcar Thoughts
 tagline:          'thinking is hard'
 description:      'A blog for the rambling thoughts of Mitchell Mohorovich.'
 url:              http://imiith.github.io
 
 author:
-  name:           'Mitchell Mohorovich'
-  url:            https://twitter.com/imiith
+   name:           'Mitchell Mohorovich'
+url:            https://twitter.com/imiith
 
 paginate:         5
 
-# Custom vars
+   # Custom vars
 version:          2.0.0
 
 github:           
-   account:       https://github.com/iMiiTH
-   repo:           https://github.com/iMiiTH/iMiiTH.github.io
+account:       https://github.com/iMiiTH
+repo:           https://github.com/iMiiTH/iMiiTH.github.io
+
+   #google analytics
+analytics: 
+provider: google
+google:
+   tracking_id: UA-57178249-1
+
+
