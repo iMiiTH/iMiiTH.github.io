@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Streetcar Thoughts</title>
+ <link href="http://imiith.github.io/atom.xml" rel="self"/>
+ <link href="http://imiith.github.io/"/>
+ <updated>2014-11-29T23:15:47-05:00</updated>
+ <id>http://imiith.github.io</id>
+ <author>
+   <name>Mitchell Mohorovich</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Finally Done</title>
+   <link href="http://imiith.github.io/general/2014/11/29/Finally-Done/"/>
+   <updated>2014-11-29T17:00:02-05:00</updated>
+   <id>http://imiith.github.io/general/2014/11/29/Finally-Done</id>
+   <content type="html">&lt;p&gt;Finally! I found the theme I like and now this blog is ready to run.&lt;/p&gt;
+
+&lt;p&gt;Also, don&amp;#39;t put slashes in post filenames.. that tends to screw things up! :D&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>OS X Yosemite</title>
+   <link href="http://imiith.github.io/general/2014/11/09/11-15-OS-X-Yosemite/"/>
+   <updated>2014-11-09T06:15:00-05:00</updated>
+   <id>http://imiith.github.io/general/2014/11/09/11-15-OS-X-Yosemite</id>
+   <content type="html">&lt;p&gt;So I was pretty excited about OS X Yosemite. Honestly just for the black menubar. So when it was announced I started wondering how the heck developers are going to support it. &lt;/p&gt;
+
+&lt;p&gt;The first thing I found was this line: &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;NSUserDefaults&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;standardUserDefaults&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;stringForKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;AppleInterfaceStyle&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Which would return the string &amp;quot;dark&amp;quot; if the theme was used, &amp;quot;&amp;quot; otherwise. &lt;/p&gt;
+
+&lt;p&gt;This worked fine and all (I guess.) it was tedious having to have a white and a black version of every menubar icon. I had those from before, where I manually set the selected and unselected icons. (Again, I had no idea what I was doing.) So it wasn&amp;#39;t all that bad. However there was a major problem using this method. &lt;/p&gt;
+
+&lt;p&gt;It would only run at startup, setting the icons for each theme, but if the user changed their theme after that, the icons wouldn&amp;#39;t change. I tried looking for some kind of message that gets sent whenever the theme changed, but found nothing.&lt;/p&gt;
+
+&lt;p&gt;In the end I finally found a solution. You set your menubar icons load them ect as normally. But you only really need one icon, you don&amp;#39;t need to make a black and a white version. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-objective-c&quot; data-lang=&quot;objective-c&quot;&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clear_day_black&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NSImage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alloc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;initWithContentsOfFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;pathForResource&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;clear-day-black@2x&amp;quot;&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;ofType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@&amp;quot;png&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]];&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clear_day_black&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;setTemplate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;YES&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;By setting it as a template, OS X will automatically make the icon white or black depending on selection/theme. I guess this is why they only allow black and white menubar icons. &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>First Post</title>
+   <link href="http://imiith.github.io/general/2014/11/08/Hello-World/"/>
+   <updated>2014-11-08T17:40:02-05:00</updated>
+   <id>http://imiith.github.io/general/2014/11/08/Hello-World</id>
+   <content type="html">&lt;p&gt;So I have no idea what I&amp;#39;m doing really. I just learned about GitHub Pages, and we&amp;#39;ll see what happens from here.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
