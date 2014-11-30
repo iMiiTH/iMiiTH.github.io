@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Streetcar Thoughts</title>
- <link href="http://imiith.github.io/atom.xml" rel="self"/>
- <link href="http://imiith.github.io/"/>
- <updated>2014-11-29T23:15:47-05:00</updated>
- <id>http://imiith.github.io</id>
+ <link href="https://twitter.com/imiith/atom.xml" rel="self"/>
+ <link href="https://twitter.com/imiith/"/>
+ <updated>2014-11-29T23:31:10-05:00</updated>
+ <id>https://twitter.com/imiith</id>
  <author>
    <name>Mitchell Mohorovich</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Finally Done</title>
-   <link href="http://imiith.github.io/general/2014/11/29/Finally-Done/"/>
+   <link href="https://twitter.com/imiith/general/2014/11/29/Finally-Done/"/>
    <updated>2014-11-29T17:00:02-05:00</updated>
-   <id>http://imiith.github.io/general/2014/11/29/Finally-Done</id>
+   <id>https://twitter.com/imiith/general/2014/11/29/Finally-Done</id>
    <content type="html">&lt;p&gt;Finally! I found the theme I like and now this blog is ready to run.&lt;/p&gt;
 
 &lt;p&gt;Also, don&amp;#39;t put slashes in post filenames.. that tends to screw things up! :D&lt;/p&gt;
@@ -25,9 +25,9 @@
  
  <entry>
    <title>OS X Yosemite</title>
-   <link href="http://imiith.github.io/general/2014/11/09/11-15-OS-X-Yosemite/"/>
+   <link href="https://twitter.com/imiith/general/2014/11/09/11-15-OS-X-Yosemite/"/>
    <updated>2014-11-09T06:15:00-05:00</updated>
-   <id>http://imiith.github.io/general/2014/11/09/11-15-OS-X-Yosemite</id>
+   <id>https://twitter.com/imiith/general/2014/11/09/11-15-OS-X-Yosemite</id>
    <content type="html">&lt;p&gt;So I was pretty excited about OS X Yosemite. Honestly just for the black menubar. So when it was announced I started wondering how the heck developers are going to support it. &lt;/p&gt;
 
 &lt;p&gt;The first thing I found was this line: &lt;/p&gt;
@@ -52,9 +52,9 @@
  
  <entry>
    <title>First Post</title>
-   <link href="http://imiith.github.io/general/2014/11/08/Hello-World/"/>
+   <link href="https://twitter.com/imiith/general/2014/11/08/Hello-World/"/>
    <updated>2014-11-08T17:40:02-05:00</updated>
-   <id>http://imiith.github.io/general/2014/11/08/Hello-World</id>
+   <id>https://twitter.com/imiith/general/2014/11/08/Hello-World</id>
    <content type="html">&lt;p&gt;So I have no idea what I&amp;#39;m doing really. I just learned about GitHub Pages, and we&amp;#39;ll see what happens from here.&lt;/p&gt;
 </content>
  </entry>
