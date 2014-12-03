@@ -1,4 +1,4 @@
 iMiiTH.github.io
 ================
 
-My Github page. What else is there to say? 
+My GitHub page. Used to talk about my programming endeavors.
