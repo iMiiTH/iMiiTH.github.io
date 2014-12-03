@@ -240,6 +240,7 @@ a.sidebar-nav-item:focus {
   .sidebar-toggle {
     position: fixed;
     width: 2.25rem;
+  background-color: #F9FAF8; 
   }
   .sidebar-toggle:before {
     padding-bottom: .15rem;
